@@ -1,0 +1,23 @@
+
+%% -- Titlesec Preamble ------------------------------------------------------------------------------------------------
+%%
+
+\usepackage{
+  titlesec
+}
+
+%% Chapter formatting
+\titleformat
+  {\section}                                % command
+  {\LARGE\selectfont\color{green}}          % format
+  {{\color{black}{\textreferencemark}}\;\;} % seperator
+  {0em}                                     % before-code
+  {}                                        % after-code
+
+%% Section formatting
+\titleformat
+  {\subsection}
+  {\Large\selectfont}
+  {\thesubsection.\;}
+  {0em}
+  {}

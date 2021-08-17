@@ -1,0 +1,27 @@
+
+%% -- Preamble - fancyhdr ----------------------------------------------------------------------------------------------
+%%
+
+\usepackage{
+  fancyhdr
+}
+
+%% -- Fancy Header setup -----------------------------------------------------------------------------------------------
+%%
+
+\pagestyle{fancy}
+\setlength{\headheight}{16pt}
+
+% Right header: section title and date created.
+\fancyhead[R]{%
+  \small
+  \textit{\nouppercase{\rightmark}}
+}
+
+% Left header text: Notes title with hyperlink to table of contents.
+\fancyhead[L]{%
+  \hyperref[sec:contents]{%
+    \small
+    Algebra Notes
+  }
+}

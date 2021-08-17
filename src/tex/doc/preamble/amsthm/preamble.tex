@@ -1,0 +1,12 @@
+\makeatletter
+\newcommand{\xdeclaretheorem}[2][]{%
+  \AtBeginEnvironment{#2}{%
+    \patchcmd\@thm
+      {\trivlist}
+      {\list{}{\leftmargin1em\itemindent-15em}}
+      {}{}%
+  }
+  \declaretheorem[#1]{#2}%
+  \expandafter\patchcmd\csname thmt@original@end#2\endcsname
+    {\endtrivlist}{\endlist}{}{}%
+}

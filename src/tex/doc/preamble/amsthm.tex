@@ -1,0 +1,51 @@
+
+%% -- Theorem Declarations ---------------------------------------------------------------------------------------------
+%%
+
+\usepackage{
+  amsthm,
+  thmtools,
+  etoolbox
+}
+
+\input{doc/preamble/amsthm/amsthm-style.tex}
+
+%% -- Theorem Declarations - Numbered ----------------------------------------------------------------------------------
+%%
+
+\declaretheorem[
+  name         = Definition,
+  style        = definition-thmstyle,
+  numberwithin = section,
+]{definition}
+
+\renewcommand*{\thedefinition}{\itshape\thesubsection.\arabic{definition}.}
+
+\xdeclaretheorem[
+  name         = Proposition,
+  style        = proposition-thmstyle,
+  numberwithin = section,
+]{proposition}
+
+\renewcommand*{\theproposition}{\itshape\thesubsection.\arabic{proposition}.}
+
+%% -- Theorem Declarations - Unnumbered --------------------------------------------------------------------------------
+%%
+
+\declaretheorem[
+  name     = Definition,
+  style    = definition-thmstyle,
+  numbered = no,
+]{definition*}
+
+\declaretheorem[
+  name     = Proof,
+  style    = proof-thmstyle,
+  numbered = no,
+]{proof*}
+
+\xdeclaretheorem[
+  name     = Proposition,
+  style    = proposition-thmstyle,
+  numbered = no,
+]{proposition*}

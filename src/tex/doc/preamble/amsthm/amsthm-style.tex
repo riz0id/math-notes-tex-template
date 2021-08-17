@@ -1,0 +1,58 @@
+
+%% -- Theorem Styles Declarations --------------------------------------------------------------------------------------
+%%
+
+\usepackage{
+  amsthm,
+  thmtools
+}
+
+\input{doc/preamble/amsthm/preamble.tex}
+
+\declaretheoremstyle[
+  headfont      = \bfseries\itshape,
+  headpunct     = {\vspace{\topsep}\newline},
+  headindent    = 0pt,
+  postheadspace = 0pt,
+  notefont      = \normalfont\itshape,
+  notebraces    = {(}{)},
+  bodyfont      = \normalfont,
+  spaceabove    = 5pt,
+  spacebelow    = \baselineskip,
+]{definition-thmstyle}
+
+\declaretheoremstyle[
+  headfont      = \kern-1em\bfseries\itshape,
+  headpunct     = {.},
+  headindent    = 0pt,
+  postheadspace = 5pt,
+  notefont      = \normalfont\itshape,
+  notebraces    = {(}{)},
+  bodyfont      = \normalfont\itshape,
+  spaceabove    = 5pt,
+  spacebelow    = \baselineskip,
+]{proposition-thmstyle}
+
+\declaretheoremstyle[
+  headfont      = \bfseries\itshape,
+  headpunct     = {.},
+  headindent    = 0pt,
+  postheadspace = 5pt,
+  notefont      = \normalfont\itshape,
+  notebraces    = {(}{)},
+  bodyfont      = \normalfont,
+  spaceabove    = 5pt,
+  spacebelow    = \baselineskip,
+]{proof-thmstyle}
+
+\declaretheoremstyle[
+  headfont      = \kern-1em\bfseries\itshape,
+  headpunct     = {.},
+  headindent    = 0pt,
+  postheadspace = 5pt,
+  notefont      = \normalfont\itshape,
+  notebraces    = {(}{)},
+  bodyfont      = \normalfont,
+  spacebelow    = 5pt,
+  spaceabove    = 5pt,
+]{hanging-ident-thmstyle}
